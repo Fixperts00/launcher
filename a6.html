@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A6 밀크T 런처 설치</title>
+  <link rel="stylesheet" href="a6.css">
+    <script src="a6.js" defer></script>
+    
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <div class="top-navigation">
+    <button class="back-btn" id="backBtn" onclick="handleBackClick()">← 기종 선택으로</button>
+    <button class="next-btn" id="nextBtn" onclick="handleNextClick()">다음 단계로 →</button>
+  </div>
+
+  <div class="mobile-tab-menu">
+    <button class="tab active" onclick="showTab(0)">1. 안드로이드 버전 확인</button>
+    <button class="tab" onclick="showTab(1)">2. 런처 설치</button>
+  </div>
+
+  <div class="tab-content active">
+    
+    <!-- 세로 모드: 스크롤 방식 -->
+    <div class="portrait-mode">
+      <div class="scroll-images" id="scrollImages0">
+        <!-- 이미지들이 JavaScript로 동적 생성됩니다 -->
+      </div>
+    </div>
+    
+    <!-- 가로 모드: 슬라이드 방식 -->
+    <div class="landscape-mode">
+      <div class="slide-container">
+        <div class="step-description" id="stepDescription0">
+          <!-- 단계 설명이 JavaScript로 동적 생성됩니다 -->
+        </div>
+        <img class="slide-image" src="" alt="슬라이드 이미지" onclick="openModal('a6', 0, currentSlides[0])" id="slideImage0">
+        <div id="slideAdditionalNote0" class="slide-additional-note" style="display: none;">
+          <!-- 추가 설명이 있는 경우 여기에 표시됩니다 -->
+        </div>
+        <div class="slide-controls">
+          <button class="arrow-btn" onclick="changeSlide(0, -1)">&#10094;</button>
+          <button class="arrow-btn" onclick="changeSlide(0, 1)">&#10095;</button>
+        </div>
+        <div class="slide-counter" id="counter0">1 / 5</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    
+    <!-- 세로 모드: 스크롤 방식 -->
+    <div class="portrait-mode">
+      <div class="scroll-images" id="scrollImages1">
+        <!-- 이미지들이 JavaScript로 동적 생성됩니다 -->
+      </div>
+    </div>
+    
+    <!-- 가로 모드: 슬라이드 방식 -->
+    <div class="landscape-mode">
+      <div class="slide-container">
+        <div class="step-description" id="stepDescription1">
+          <!-- 단계 설명이 JavaScript로 동적 생성됩니다 -->
+        </div>
+        <img class="slide-image" src="" alt="슬라이드 이미지" onclick="openModal('a6', 1, currentSlides[1])" id="slideImage1">
+        <div id="slideAdditionalNote1" class="slide-additional-note" style="display: none;">
+          <!-- 추가 설명이 있는 경우 여기에 표시됩니다 -->
+        </div>
+        <div class="slide-controls">
+          <button class="arrow-btn" onclick="changeSlide(1, -1)">&#10094;</button>
+          <button class="arrow-btn" onclick="changeSlide(1, 1)">&#10095;</button>
+        </div>
+        <div class="slide-counter" id="counter1">1 / 24</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <button class="modal-nav prev" onclick="navigateModal(-1)">&#10094;</button>
+    <img id="modalImage" class="modal-content" />
+    <button class="modal-nav next" onclick="navigateModal(1)">&#10095;</button>
+  </div>
+
+  <!-- 맨 위로 버튼 -->
+  <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+    ↑
+  </button>
+  
+</body>
+</html>

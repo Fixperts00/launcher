@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>런처 설치 기종 선택</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .device-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .device-card {
+      background-color: #ffffff;
+      border: 2px solid #4a90e2;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .device-card:hover {
+      background-color: #e6f0fb;
+    }
+
+    .device-card p {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+
+    .device-card img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    @media (min-width: 768px) {
+      .device-list {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>런처 설치할 기기를 선택해주세요</h1>
+  <div class="device-list">
+    <div class="device-card" onclick="location.href='s6lite.html'">
+      <p>갤럭시 탭 S6 Lite</p>
+      <img src="https://raw.githubusercontent.com/skyhigh79/tab/main/s6lite.png" alt="S6 Lite 이미지">
+    </div>
+    <div class="device-card" onclick="location.href='a6.html'">
+      <p>갤럭시 탭 A6</p>
+      <img src="https://raw.githubusercontent.com/skyhigh79/tab/main/a6.png" alt="A6 이미지">
+    </div>
+  </div>
+</body>
+</html>
